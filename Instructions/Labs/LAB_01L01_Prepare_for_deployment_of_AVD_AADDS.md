@@ -89,7 +89,7 @@ The main tasks for this exercise are as follows:
    |Issue type|**Service and subscription limits (quotas)**|
    |Subscription|the name of the Azure subscription you will be using in this lab|
    |Quota type|**Compute-VM (cores-vCPUs) subscription limit increases**|
-   |Support plan|the name of the support plan associated with the target subscription|
+   
 
 1. On the **Details** tab of the **New support request** blade, select the **Provide details** link.
 1. On the **Quota details** tab of the **New support request** blade, specify the following and select **Save and continue**:
@@ -98,7 +98,6 @@ The main tasks for this exercise are as follows:
    |---|---|
    |Deployment model|**Resource Manager**|
    |Location|the name of the Azure region you intend to use in this lab|
-   |Types|**Standard**|
    |Standard|**BS Series**|
    |New vCPU Limit|the new limit|
    |Standard|**DSv3 Series**|
@@ -109,7 +108,7 @@ The main tasks for this exercise are as follows:
 1. Back on the **Details** tab of the **New support request** blade, specify the following and select **Next: Review + create >**:
 
    |Setting|Value|
-   |---|---|
+   | **Allow collection of advanced diagnostic information?**|Select **Yes**|
    |Severity|**C - Minimal impact**|
    |Preferred contact method|choose your preferred option and provide your contact details|
     
@@ -148,7 +147,8 @@ The main tasks for this exercise are as follows:
    ```powershell
    $aadDomainName = ((Get-AzureAdTenantDetail).VerifiedDomains)[0].Name
    ```
-
+    > **Note**: If no data is returned, continue the lab.  there may be a delay in associating a domain name to the new tenant.
+    
 1. From the Cloud Shell pane, run the following to create Azure AD users that will be granted elevated privileges:
 
    ```powershell
@@ -181,7 +181,7 @@ The main tasks for this exercise are as follows:
 1. Close the Cloud Shell pane.
 1. Within the Azure portal, search for and select **Subscriptions** and, from the **Subscriptions** blade, select the Azure subscription you are using in this lab. 
 1. On the blade displaying properties of your Azure subscription, select **Access control (IAM)**, select **+ Add**, and, in the drop-down list, select **Add role assignment**. 
-1. On the **Add role assignment** blade, specify the following settings and select **Save**:
+1. On the **Add role assignment** blade, specify the following settings and select **Review + assign**:
 
    |Setting|Value|
    |---|---|
@@ -194,7 +194,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Deploy an Azure AD DS instance by using the Azure portal
 
-1. From your lab computer, in the Azure portal, search for and select **Azure AD Domain Services** and, from the **Azure AD Domain Services** blade, select **+ Add**. This will open the **Create Azure AD Domain Services** blade.
+1. From your lab computer, in the Azure portal, search for and select **Azure AD Domain Services** and, from the **Azure AD Domain Services** blade, select **+ Create**. This will open the **Create Azure AD Domain Services** blade.
 1. On the **Basics** tab of the **Create Azure AD Domain Services** blade, specify the following settings and select **Next** (leave others with their existing values):
 
    |Setting|Value|
