@@ -146,9 +146,9 @@ The main tasks for this exercise are as follows:
 
    ```powershell
    $aadDomainName = ((Get-AzureAdTenantDetail).VerifiedDomains)[0].Name
+   $aadDomainName
    ```
-    > **Note**: If no data is returned, continue the lab.  there may be a delay in associating a domain name to the new tenant.
-    
+       
 1. From the Cloud Shell pane, run the following to create Azure AD users that will be granted elevated privileges:
 
    ```powershell
@@ -316,7 +316,8 @@ The main tasks for this exercise are as follows:
 1  Close the Cloud Shell pane.
 1. From your lab computer, in the Azure portal, search for and select **Virtual machines** and, from the **Virtual machines** blade, select the **az140-cl-vm11a** entry. This will open the **az140-cl-vm11a** blade.
 1. On the **az140-cl-vm11a** blade, select **Connect**, in the drop-down menu, select **RDP**, on the **RDP** tab of the **az140-cl-vm11a \| Connect** blade, in the **IP address** drop-down list, select the **Public IP address** entry, and then select **Download RDP File**.
-1. When prompted, sign in with the following credentials:
+2. In the **Downloads** window, under **az-140-cl-vm11a.rdp** file name, select **Open file**.
+3. When prompted, sign in with the following credentials:
 
    |Setting|Value|
    |---|---|
@@ -345,8 +346,11 @@ The main tasks for this exercise are as follows:
 #### Task 3: Create AD DS users and groups that will be synchronized to Azure AD DS
 
 1. Within the Remote Desktop to the **az140-cl-vm11a** Azure VM, start Microsoft Edge, navigate to the [Azure portal](https://portal.azure.com), and sign in by providing user principal name of the **aadadmin1** user account with **Pa55w.rd1234** as its password.
-1. In the Azure portal, open the **Cloud Shell**.
-1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
+  
+  > **Note**: Append the aadadmin1 account name with the @ sign and the user principal name suffix shown in Step 7 above.
+   
+3. In the Azure portal, open the **Cloud Shell**.
+4. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
    >**Note**: Since this is the first time you are starting **Cloud Shell** by using the **aadadmin1** user account, you will need to configure its Cloud Shell home directory. When presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**. 
 
@@ -360,6 +364,7 @@ The main tasks for this exercise are as follows:
 
    ```powershell
    $aadDomainName = ((Get-AzureAdTenantDetail).VerifiedDomains)[0].Name
+   $aadDomainName
    ```
 
 1. From the PowerShell session in the Cloud Shell pane, run the following to create the Azure AD user accounts you will use in the upcoming labs:
