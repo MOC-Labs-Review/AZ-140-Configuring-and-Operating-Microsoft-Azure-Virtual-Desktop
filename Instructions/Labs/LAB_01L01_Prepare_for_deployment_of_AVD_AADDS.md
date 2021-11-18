@@ -434,6 +434,7 @@ The main tasks for this exercise are as follows:
    $userObjectId = (Get-AzureADUser -Filter "MailNickName eq 'aaduser9'").ObjectId
    Add-AzureADGroupMember -ObjectId $az140wvdapersonal.ObjectId -RefObjectId $userObjectId
    ```
+   >**Note**: Sometimes the buffer size of the [T] construct does not allow all characters to be copied properly.  Using it in this step may only run the PowerShell commands up to the  Add-AzureADGroupMember -ObjectId $az140wvdaremoteapp.ObjectId -RefObjectId $userObjectId line but not the  $az140wvdapooled and subsequent section.  Observe carefully, and if this occurs, manually copy and paste the remaining objects over to the Cloud Shell PowerShell console.
 
 1. Close the Cloud Shell pane.
 1. Within the Remote Desktop to the **az140-cl-vm11a** Azure VM, in the Microsoft Edge window displaying the Azure portal, search for and select **Azure Active Directory** blade, on your Azure AD tenant blade, in the vertical menu bar on the left side, in the **Manage** section, select **Users** and, on the **Users \| All users** blade, verify that new user accounts have been created.
