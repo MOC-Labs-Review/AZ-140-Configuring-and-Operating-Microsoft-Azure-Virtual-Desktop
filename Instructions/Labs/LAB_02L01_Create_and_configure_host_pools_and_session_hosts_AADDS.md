@@ -90,6 +90,7 @@ The main tasks for this exercise are as follows:
    |---|---|
    |Add virtual machines|**Yes**|
    |Resource group|**Defaulted to same as host pool**|
+   |Name prefix| **hp1**|
    |Virtual machine location|the name of the Azure region into which you deployed resources in the first exercise of this lab|
    |Availability options|**No infrastructure redundancy required**|
    |Image type|**Gallery**|
@@ -102,11 +103,7 @@ The main tasks for this exercise are as follows:
    |Subnet|**hp1-Subnet (10.10.1.0/24)**|
    |Network security group|**Basic**|
    |Public inbound ports|**No**|
-   |Specify domain or unit|**Yes**|
-   |Domain to join|**adatum.com**|
-   |Organizational Unit path|**OU=AADDC Computers,DC=adatum,DC=com**|
-   |AD domain join UPN|**aadadmin1@***<Azure_AD_domain_name>*|
-   |Password|**Pa55w.rd1234**|
+   |Select which directory you would like to join| in dropdown list, **Azure Active Directory**|
    |Virtual Machine Administrator account username|**student**|
    |Virtual Machine Administrator account password|**Pa55w.rd1234**|
 
