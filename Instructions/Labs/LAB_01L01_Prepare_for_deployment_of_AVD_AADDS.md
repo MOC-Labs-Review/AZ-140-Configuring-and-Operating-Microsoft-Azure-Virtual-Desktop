@@ -356,14 +356,14 @@ The main tasks for this exercise are as follows:
    Add-AzureADGroupMember -ObjectId $groupObjectId -RefObjectId $userObjectId
    ```
 
-1  Close the Cloud Shell pane.
+1.  Close the Cloud Shell pane.
 1. From your lab computer, in the Azure portal, search for and select **Virtual machines** and, from the **Virtual machines** blade, select the **az140-cl-vm11a** entry. This will open the **az140-cl-vm11a** blade.
 1. On the **az140-cl-vm11a** blade, select **Connect**, in the drop-down menu, select **Bastion**, on the **Bastion** tab of the **az140-cl-vm11a \| Connect** blade, select **Use Bastion**.
 1. When prompted, provde the following credentials and select **Connect**:
 
    |Setting|Value|
    |---|---|
-   |User Name|**Student@adatum.com**|
+   |User Name|**aadmin1@adatum.com**|
    |Password|**Pa55w.rd1234**|
 
 1. Within the Remote Desktop to the **az140-cl-vm11a** Azure VM, start **Windows PowerShell ISE** as Administrator and, from the **Administrator: Windows PowerShell ISE** script pane, run the following to install the Active Directory and DNS-related Remote Server Administration Tools:
